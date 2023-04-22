@@ -58,11 +58,23 @@ class CLI {
           message: 'What color would you like your text to be?',
         },
         {
-          type: 'confirm',
-          name: 'confirmAddTask',
-          message: 'Would you like to add another task?',
+            type: 'list',
+            message: 'Which shape would you like your logo to be?',
+            name: 'shape',
+            choices: ['Circle', 'Triangle', 'Square'],
+    
+        },
+        {
+          type: 'input',
+          name: 'shapeColor',
+          message: 'Would color would you like your shape to be?',
         },
       ])
+      .then(() => console.log('Generated Logo.svg'))
+      .catch((err) => {
+        console.log(err);
+        console.log('Oops. Something went wrong.');
+      });
       .then(({ text, priority, confirmAddTask }) => {
         this.tasks.push({ text, priority });
         if (confirmAddTask) {
