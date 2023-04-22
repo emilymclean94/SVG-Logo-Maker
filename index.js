@@ -1,5 +1,12 @@
-const CLI = require('./assets/lib/cli');
+const inquirer = require('inquirer');
 
-const cli = new CLI();
-
-cli.run();
+class CLI {
+    run() {
+        return inquirer
+            .prompt ([
+                /*
+                    Prompt the user for the specs they want displayed in the svg
+                */
+            ])
+    }
+}
