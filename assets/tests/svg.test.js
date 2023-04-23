@@ -1,9 +1,9 @@
-const SVG = require('./svg');
+const SVG = require("../lib/svg");
 
-test('should throw an error is text is more than 3 characters', () => {
+test('should throw an error if text is more than 3 characters', () => {
     const expectedError = new Error('Text cannot exceed 3 characters dummy!');
     const svg = new SVG();
-    expectedError({} => svg.detText('yeahhh', '#fff')).toThrow(expectedError);
+    expectedError(() => svg.detText('yeahhh', '#fff')).toThrow(expectedError);
 });
 
 test('should set text message and color', () => {
@@ -15,7 +15,7 @@ test('should set text message and color', () => {
 });
 
 test('should render a 300 x 200 svg element', => {
-    const exepectedSvgSize = ;
+    const expectedSvgSize = ;
     const svg = new SVG();
 
 });
