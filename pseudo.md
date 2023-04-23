@@ -17,12 +17,12 @@
             AKA write an SVG file -->
 
 <!-- ? Objects to add to prompt array -->
-    <!--TODO: -Choose 3 characters to include in your logo. -->
-    <!-- TODO: toUpperCase() for letters -->
-        <!--TODO: -What would you like the text color to be? (keyword or hex) -->
-        <!--TODO: -What shape would you like to use? -->
-        <!--TODO: -List of shape choices (circle, triangle, square) -->
-        <!--TODO: -What color do you want your shape to be? (keyword or hex) -->
+    <!-- -Choose 3 characters to include in your logo. -->
+    <!-- toUpperCase() for letters -->
+        <!-- -What would you like the text color to be? (keyword or hex) -->
+        <!-- -What shape would you like to use? -->
+        <!-- -List of shape choices (circle, triangle, square) -->
+        <!-- -What color do you want your shape to be? (keyword or hex) -->
 
 <!-- TODO: Function to print "Generated logo.svg" when all prompts are answered-->
 
