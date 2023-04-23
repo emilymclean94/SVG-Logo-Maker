@@ -30,3 +30,5 @@ class Square extends Shape {
         */
     }
 }
+
+module.exports = Shape;
