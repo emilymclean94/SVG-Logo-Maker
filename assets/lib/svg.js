@@ -15,7 +15,7 @@ class SVG {
 
     setText(text, textColor) {
         if (text.length > 3) {
-            throw new Error('Text cannot exceed 3 characters dummy!');
+            throw new Error('Text cannot exceed 3 characters!');
         }
 
         this.textElement = `<text x="150" y="125" font-size="60" text-anchor="middle" fill="${textColor}">${text}</text>`;

@@ -1,10 +1,10 @@
 const SVG = require("../lib/svg.js");
 
-// test('should throw an error if text is more than 3 characters', () => {
-//     const expectedError = new Error('Text cannot exceed 3 characters dummy!');
-//     const svg = new SVG();
-//     expectedError(() => svg.setText('yeahhh', '#fff')).toThrow(expectedError);
-// });
+test('should throw an error if text is more than 3 characters', () => {
+    const expectedError = new Error('Text cannot exceed 3 characters!');
+    const svg = new SVG();
+    expect(svg.setText('woop')).toEqual(expectedError);
+});
 
 test('should set text message and color', () => {
     const expectedSvg = '<svg version="1.1" width="300 height="200 xmlns="http://www.w3.org/2000/svg"><text x="150" y="125" font-size="60" text-anchor="middle" fill="#333">SVG</text></svg>';
