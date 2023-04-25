@@ -16,10 +16,10 @@ This project was created to take user input in the CLI and generate a logo via s
 ## Usage
 Make sure you have the necessary packages installed. This project specifically uses the [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4) package. Once you have the necessary packages, open the terminal in your code editing software. Type in the command 'node index.js' and answer the following prompts. Once you have answered all prompts, you will see a message that says "SVG file has been created" logged in the console. Your generated logo will be located in the Output folder within the 'assets' with the file name 'logo.svg'. Lastly, open in a Live Server to view your new logo!
 
-To view a demonstration on how to use the app [click here](https://drive.google.com/file/d/1GNNnZOYwJmfodmPBQvlmlovALTdEvPju/view).
+To view a demonstration on how to use the app [click here](https://drive.google.com/file/d/1kRuxy3DsXLtsMRRqZckhSE7qUZT-6IBK/view).
 
 ## License
-To learn more about the license used in this project [click here](https://opensource.org/licenses/Apache-2.0).
+To learn more about the license used in this project [click here](https://opensource.org/licenses/MIT).
 
 ## Credits
 I'd like to thank my instructor, TAs, the Ask BCS staff, and most importantly, my class mates for the positivity and encouragement.  
