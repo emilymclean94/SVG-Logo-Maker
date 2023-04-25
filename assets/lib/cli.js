@@ -32,22 +32,24 @@ class CLI {
       ])
       .then((data) => {
         let shape;
-        const fileName = './output/logo.svg'
         const svg = new SVG()
 
-        if (data.shape === 'circle') {
+
+        if (data.shape === 'Circle') {
           shape = new Circle();
-        } else if (data.shape === 'triangle') {
+        } else if (data.shape === 'Triangle') {
           shape = new Triangle()
-        } else if (data.shape === 'square') {
+        } else if (data.shape === 'Square') {
           shape = new Square()
         };
 
-        shape.setShapeColor(data.shapeColor);
-        svg.createText(data.text, data.textColor)
-        svg.createShape(data.shape);
+        console.log(shape)
 
-        fs.writeFile(fileName, svg.render(), (err) => {
+        shape.setShapeColor(data.shapeColor);
+        svg.setText(data.text, data.textColor)
+        svg.setShape(shape);
+
+        fs.writeFile('./assets/output/logo.svg', svg.render(), (err) => {
           if (err) {
             console.log(err)
           } console.log('SVG file has been created!')
@@ -56,7 +58,7 @@ class CLI {
       )
       .catch((err) => {
         if (err) {
-        console.log('ERROR: idk man something went wrong');
+        console.log(err);
         }
       })
 
