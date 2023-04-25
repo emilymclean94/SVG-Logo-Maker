@@ -39,11 +39,11 @@ class CLI {
       
 
         if (shape === 'circle') {
-          selectedShape = new Circle();
+          shape = new Circle();
         } else if (shape === 'triangle') {
-          selectedShape = new Triangle()
+          shape = new Triangle()
         } else if (shape === 'square') {
-          selectedShape = new Square()
+          shape = new Square()
         } 
 
         const userSVG = new SVG();
