@@ -1,5 +1,3 @@
-const Shape = require('./shapes');
-
 class SVG {
     constructor() {
         this.textElement = "";
@@ -20,7 +18,7 @@ class SVG {
     }
 
     setShape(shape) {
-        this.shapeElement = Shape();
+        this.shapeElement = shape.render();
     }
 
 }

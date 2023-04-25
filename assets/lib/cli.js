@@ -1,12 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const {Circle, Triangle, Square} = require('./shapes');
+const { Circle, Triangle, Square } = require('./shapes');
 const SVG = require('./svg.js');
-
-function writeToFile(data) {
-    fs.writeFile('./output/logo.svg', data, (error) => {
-        error ? console.log(error) : console.log('success')
-    })}
 
 class CLI {
   run() {
@@ -36,7 +31,9 @@ class CLI {
         },
       ])
       .then((data) => {
-      let shape;
+        let shape;
+        const fileName = './output/logo.svg'
+        const svg = new SVG()
 
         if (data.shape === 'circle') {
           shape = new Circle();
@@ -44,29 +41,28 @@ class CLI {
           shape = new Triangle()
         } else if (data.shape === 'square') {
           shape = new Square()
-        } 
-        console.log(data.shape);
-        // shape.setShapeColor(data.shapeColor);
+        };
 
-        const userSVG = new SVG();
-        userSVG.setText(data.text, data.textColor);
-        userSVG.setShape(shape);
+        shape.setShapeColor(data.shapeColor);
+        svg.createText(data.text, data.textColor)
+        svg.createShape(data.shape);
 
-        return writeToFile(data)
-
-        // TODO: return the writeFile method, passing in the file name and the rendered svg.
-
-      })
-      .then(() => {
-        console.log('Logo has been generated!');
-      })
-      .catch((error) => {
-        console.log(error);
+        fs.writeFile(fileName, svg.render(), (err) => {
+          if (err) {
+            console.log(err)
+          } console.log('SVG file has been created!')
+        });
+      }
+      )
+      .catch((err) => {
+        if (err) {
         console.log('ERROR: idk man something went wrong');
+        }
       })
-  }
-}
 
+  }
+
+}
 
 
 module.exports = CLI;
