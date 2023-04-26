@@ -30,11 +30,12 @@ class CLI {
           message: 'What color would you like your shape to be?',
         },
       ])
+      // Will create a new instance of the shape class and SVG class
       .then((data) => {
         let shape;
         const svg = new SVG()
 
-
+        // If/else to loop through shape options
         if (data.shape === 'Circle') {
           shape = new Circle();
         } else if (data.shape === 'Triangle') {
@@ -43,12 +44,11 @@ class CLI {
           shape = new Square()
         };
 
-        console.log(shape)
-
         shape.setShapeColor(data.shapeColor);
         svg.setText(data.text, data.textColor)
         svg.setShape(shape);
 
+        // Writes the svg file and logs an error if there's an issue in creating it
         fs.writeFile('./assets/output/logo.svg', svg.render(), (err) => {
           if (err) {
             console.log(err)
@@ -56,6 +56,7 @@ class CLI {
         });
       }
       )
+      // Will log any errors in inquirer.prompt
       .catch((err) => {
         if (err) {
         console.log(err);
