@@ -12,7 +12,7 @@ class SVG {
     // Sets text attributes of the logo
     setText(text, textColor) {
         if (text.length > 3) {
-            throw new Error('Text cannot exceed 3 characters!');
+            throw Error('Text cannot exceed 3 characters!');
         };
 
         this.textElement = `<text x="50%" y="50%" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="${textColor}">${text}</text>`;

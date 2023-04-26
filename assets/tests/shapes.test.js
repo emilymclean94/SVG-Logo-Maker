@@ -1,5 +1,3 @@
-// import { Circle, Shape } from '../lib/shapes.js';
-
 const Shape = require('../lib/shapes.js');
 const Circle = require('../lib/shapes.js');
 const Triangle = require('../lib/shapes.js');
